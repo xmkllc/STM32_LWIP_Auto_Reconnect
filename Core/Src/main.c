@@ -106,7 +106,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  MX_LWIP_Process();
-	  HAL_Delay(1);
+//	  HAL_Delay(1);
   }
   /* USER CODE END 3 */
 }
