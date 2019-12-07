@@ -1,6 +1,6 @@
-##STM32 LWIP Auto Reconnect
+## STM32 LWIP Auto Reconnect
 
-###Intro
+### Intro
 This is a demo program to show how to deal with LWIP initialization without Ethernet cable.
 
 The demo is a STM32CubeIDE generated project using LWIP without an OS on a STM32F407VGTx
@@ -17,11 +17,11 @@ of Ethernet connection after power on, it will try to bring up the network inter
 start DHCP. The system will work afterwards. The actual code with comments can be found
 in stm32f4xx_it.c.
 
-###Hardware
+### Hardware
 - STM32F407VGTx Discovery
 - STM32F4DIS-BB expansion board (PHY: Lan8742A)
 
-###CubeMX Configuration
+### CubeMX Configuration
 - Start without default settings
 - Clock: enable HSE (PCLK1 42MHz)
 - ETH:
@@ -38,11 +38,11 @@ in stm32f4xx_it.c.
    - TIM3 global interrupt: enabled
 - LEDs:
 
-###Code
+### Code
 I include iperf later for testing. For some reason lwiperf.c is not included after code generation.
 I have to manually add that file.
 
-###LEDs:
+### LEDs:
 The orange led blinks for TIM3 interrupt. The red is on when PHY_LINKED_STATUS is down.
 The blue is on when NETIF_FLAG_LINK_UP is down. Both are on when the board is powered on
 without Ethernet cable. Both are off when network is working.
